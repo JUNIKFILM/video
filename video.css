@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative !important;
+  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-private-custom-movie-advertising-background-backgroundprivate-cinema-backgroundmovie-image_87837.jpg) !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: cover !important;
+  object-fit: cover !important;
+
+  &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0 0 0 / 60%);
+  }
+}
+
+.movie-container {
+  position: relative;
+  top: 50px;
+  margin: 1.5rem auto;
+  color: #fff;
+  max-width: 600px;
+  border: 1px solid #575757;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.movie-details {
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.play-button {
+  margin-top: 1.5rem;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.1s ease;
+}
+
+.play-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(45deg, #ff3366, #ff6b6b, #4834d4, #686de0);
+  -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+  mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.play-button i {
+  position: relative;
+  z-index: 1;
+  font-size: 48px;
+  color: #fff;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+
+  50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+  }
+
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+}
+
+.play-button:active {
+  transform: scale(0.95);
+}
+
+#trailer-container {
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+#dark-mode-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #111;
+  color: #fff;
+}
