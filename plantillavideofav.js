@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
           favoritesHTML += `
               <div class="favorite-movie" data-id="${movie.id}">
                   <div class="fav-movie-poster">
-                      <img src="https://image.tmdb.org/t/p/original/3r35450xYomrCvPbFxr0MhYk5q7.jpg" alt="${movie.title}" class="fav-movie-poster">
+                      <img src="/api/placeholder/80/120" alt="${movie.title}" class="fav-movie-poster">
                   </div>
                   <div class="fav-movie-info">
                       <div class="movie-header">
