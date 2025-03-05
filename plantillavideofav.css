@@ -26,12 +26,16 @@ body {
   z-index: 100;
   height: 40px;
 }
-img{
+.fav img{
 width: 30px;
 height: 30px;
 display: none;
 }
 
+img{
+  width: 30px;
+  height: 30px;
+}
 
 .container {
   display: flex;
@@ -45,6 +49,7 @@ display: none;
 .header h1 {
   font-size: 20px;
   color: rgb(255, 209, 4);
+  
 }
 
 .section-title {
