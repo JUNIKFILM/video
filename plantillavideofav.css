@@ -29,6 +29,7 @@ body {
 img{
 width: 30px;
 height: 30px;
+display: none;
 }
 
 
@@ -49,7 +50,7 @@ height: 30px;
 .section-title {
   font-size: 24px;
   margin: 20px 0 10px;
-  color: rgb(255, 209, 4);
+  color: #e50914;
 }
 
 .movie-list {
@@ -160,21 +161,9 @@ height: 30px;
   margin-top: 8px;
 }
 
-.favorites-section {
-  background-color: #00000000;
-  border-radius: 8px;
-  padding: 16px;
-  margin-top: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  display: none;
-}
 
-.favorites-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 12px;
-}
+
+
 
 .favorite-movie {
   display: flex;
@@ -216,11 +205,6 @@ height: 30px;
   margin-top: 6px;
 }
 
-.empty-favorites {
-  color: #aaa;
-  text-align: center;
-  padding: 20px;
-}
 
 @media (max-width: 768px) {
   .movie-list {
