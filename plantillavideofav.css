@@ -29,7 +29,7 @@ body {
 .fav img{
 width: 30px;
 height: 30px;
-display: none;
+display: block;
 }
 
 img{
