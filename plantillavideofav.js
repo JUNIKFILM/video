@@ -63,25 +63,28 @@ document.addEventListener('DOMContentLoaded', function() {
       let favoritesHTML = '';
       
       favorites.forEach(movie => {
-          favoritesHTML += `
-              <div class="favorite-movie" data-id="${movie.id}">
-                  <div class="fav-movie-poster">
-                      <img src="/api/placeholder/80/120" alt="${movie.title}" class="fav-movie-poster">
-                  </div>
-                  <div class="fav-movie-info">
-                      <div class="movie-header">
-                          <span class="movie-title">${movie.title}</span>
-                          <span class="movie-year">${movie.year}</span>
-                      </div>
-                      <div class="movie-metadata">
-                          ${movie.genres.map(genre => `<span class="movie-genre">${genre}</span>`).join('')}
-                          <span class="movie-duration">${movie.duration}</span>
-                      </div>
-                      <button class="remove-favorite" data-id="${movie.id}">Quitar de favoritos</button>
-                  </div>
-              </div>
-          `;
-      });
+    // Extract the image source from the post section
+    const posterImg = document.querySelector('.post img').src;
+    
+    favoritesHTML += `
+        <div class="favorite-movie" data-id="${movie.id}">
+            <div class="fav-movie-poster">
+                <img src="${posterImg}" alt="${movie.title}" class="fav-movie-poster">
+            </div>
+            <div class="fav-movie-info">
+                <div class="movie-header">
+                    <span class="movie-title">${movie.title}</span>
+                    <span class="movie-year">${movie.year}</span>
+                </div>
+                <div class="movie-metadata">
+                    ${movie.genres.map(genre => `<span class="movie-genre">${genre}</span>`).join('')}
+                    <span class="movie-duration">${movie.duration}</span>
+                </div>
+                <button class="remove-favorite" data-id="${movie.id}">Quitar de favoritos</button>
+            </div>
+        </div>
+    `;
+});
       
       favoritesList.innerHTML = favoritesHTML;
       
