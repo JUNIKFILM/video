@@ -26,16 +26,7 @@ body {
   z-index: 100;
   height: 40px;
 }
-.fav img{
-width: 30px;
-height: 30px;
-display: block;
-}
 
-img{
-  width: 30px;
-  height: 30px;
-}
 
 .container {
   display: flex;
@@ -52,38 +43,15 @@ img{
   
 }
 
-.section-title {
-  font-size: 24px;
-  margin: 20px 0 10px;
-  color: #e50914;
-}
 
-.movie-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
 
-.movie-card {
-  background-color: #00000083;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
+
 
 .movie-card:hover {
   transform: translateY(-5px);
 }
 
-.movie-poster {
-  width: 100%;
-  height: 250px;
-  background-color: #22222249;
-  position: relative;
-}
+
 
 .movie-info {
   padding: 16px;
@@ -115,24 +83,13 @@ img{
   margin-right: 8px;
 }
 
-.fav {
+img{
+  width: 30px;
+  height: 30px;
+}
+
+.fav{
   display: flex;
-  align-items: center;
-}
-
-.tt {
-  cursor: pointer;
-  width: 28px;
-  height: 28px;
-  transition: transform 0.2s ease;
-}
-
-.tt:hover {
-  transform: scale(1.2);
-}
-
-.tt.active {
-  filter: invert(72%) sepia(87%) saturate(1482%) hue-rotate(358deg) brightness(103%) contrast(106%);
 }
 
 .movie-metadata {
@@ -160,59 +117,55 @@ img{
 }
 
 .movie-description {
-  color: #ccc;
-  font-size: 14px;
   line-height: 1.5;
   margin-top: 8px;
+  
 }
 
-
-
-
-
-.favorite-movie {
-  display: flex;
-  background-color: #222;
-  border-radius: 6px;
-  overflow: hidden;
-  width: 100%;
-  max-width: 400px;
+.favorites-section {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
-
-.fav-movie-poster {
-  width: 80px;
-  height: 120px;
-  background-color: #333;
-  object-fit: cover;
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
 }
-
-.fav-movie-info {
+.favorite-item {
+  background: rgba(19, 18, 18, 0.315);
   padding: 10px;
-  flex: 1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
-.favorite-movie .movie-title {
-  font-size: 16px;
-}
-
-.favorite-movie .movie-metadata {
-  margin: 6px 0;
-}
-
-.remove-favorite {
-  background-color: #e50914;
-  color: white;
-  border: none;
+.favorite-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
   border-radius: 4px;
-  padding: 4px 8px;
-  cursor: pointer;
-  font-size: 12px;
-  margin-top: 6px;
+}
+.favorite-item-info {
+  margin-top: 10px;
+}
+.hidden {
+  display: none;
 }
 
-
-@media (max-width: 768px) {
-  .movie-list {
-      justify-content: center;
-  }
+.fav img{
+  display: block;
 }
+
+.pun{
+background-color: #f8d300;
+text-align: center;
+padding: 1px;
+font-size: 15px;
+font-weight: bold;
+}
+
+.favorite-btn {
+background-color: rgba(0, 0, 0, 0.534);
+}
+
