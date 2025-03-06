@@ -1,4 +1,4 @@
-  * {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -80,7 +80,7 @@ body {
         .movie-rating {
             background-color: #f5c518;
             color: rgb(255, 254, 254);
-            padding: 2px 6px;
+            padding: 1px 4px;
             border-radius: 4px;
             font-weight: bold;
         }
@@ -126,7 +126,15 @@ body {
         }
         
         .fav-button.active {
-            color: #f5c518; /* Color amarillo cuando está activo */
+          cursor: pointer;
+        }
+
+        .fav {
+          display: flex;
+          width: 30px;
+          height: 30px;
+          margin-right:30px;
+
         }
         
         /* Estilos para la sección de favoritos */
@@ -212,6 +220,11 @@ body {
 
 .notification.error {
     background-color: #f443368e;
+}
+
+img {
+  width: 30px;
+  height: 30px;
 }
 
 #fav-0{
