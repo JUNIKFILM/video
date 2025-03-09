@@ -16,7 +16,7 @@ function createOfflineNotification() {
       </svg>
     </div>
     <div class="notification-content">
-      <h3>Sin conexión a Internet</h3>
+      <h2>Sin conexión a Internet</h2>
     </div>
   `;
   
@@ -40,7 +40,7 @@ function createOnlineNotification() {
       </svg>
     </div>
     <div class="notification-content">
-      <h3>Conexión restablecida</h3>
+      <h2>Conexión restablecida</h2>
     </div>
   `;
   
